@@ -75,7 +75,7 @@ jobs:
   - get: pal-tracker
   - get: pal-tracker-artifacts
     passed: [deploy-review]
-  - put: prduction-deployment
+  - put: production-deployment
     params:
       manifest: pal-tracker/manifest-production.yml
       path: pal-tracker-artifcats/pal-tracker-*.jar
