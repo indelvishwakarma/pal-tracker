@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -14,7 +16,10 @@ public class TimeEntryController {
 
     public TimeEntryController(TimeEntryRepository timeEntriesRepo) {
         this.timeEntriesRepo = timeEntriesRepo;
+        //long id, long projectId, long userId, LocalDate date, int hours
+        this.timeEntriesRepo.create(new TimeEntry(-99,101,9999,LocalDate.now(),10));
     }
+
 
     @PostMapping
     public ResponseEntity<TimeEntry> create(@RequestBody TimeEntry timeEntry) {
