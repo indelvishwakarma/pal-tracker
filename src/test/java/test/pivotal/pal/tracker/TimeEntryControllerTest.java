@@ -64,9 +64,10 @@ public class TimeEntryControllerTest {
 
     @Test
     public void testList() throws Exception {
+
         List<TimeEntry> expected = asList(
-                new TimeEntry(1, 123, 456, LocalDate.parse("2017-01-08"), 8),
-                new TimeEntry(2, 789, 321, LocalDate.parse("2017-01-07"), 4)
+                new TimeEntry(1, 123, 456, LocalDate.parse("2017-01-08"), 8)
+                , new TimeEntry(2, 789, 321, LocalDate.parse("2017-01-07"), 4)
         );
         doReturn(expected).when(timeEntryRepository).list();
 
