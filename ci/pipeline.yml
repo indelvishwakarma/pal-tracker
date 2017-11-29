@@ -66,7 +66,7 @@ jobs:
   - put: review-deployment
     params:
       manifest: pal-tracker/manifest-review.yml
-      path: pal-tracker-artifcats/pal-tracker-*.jar
+      path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
         WELCOME_MESSAGE: "Welcom message from the review environmet"
 
@@ -78,6 +78,6 @@ jobs:
   - put: production-deployment
     params:
       manifest: pal-tracker/manifest-production.yml
-      path: pal-tracker-artifcats/pal-tracker-*.jar
+      path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
         WELCOME_MESSAGE: "Welcom message from the production environmet"
