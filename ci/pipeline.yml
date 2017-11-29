@@ -29,7 +29,7 @@ resources:
     api: {{cf-api-url}}
     username: {{cf-username}}
     password: {{cf-password}}
-    organisation: {{cf-org}}
+    organization: {{cf-org}}
     space: review
 
 - name: production-deployment
@@ -38,7 +38,7 @@ resources:
     api: {{cf-api-url}}
     username: {{cf-username}}
     password: {{cf-password}}
-    organisation: {{cf-org}}
+    organization: {{cf-org}}
     space: production
 
 jobs:
@@ -68,7 +68,7 @@ jobs:
       manifest: pal-tracker/manifest-review.yml
       path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
-        WELCOME_MESSAGE: "Welcome message from the review environment"
+        WELCOME_MESSAGE: "Hello from the review environment"
 
 - name: deploy-production
   plan:
@@ -80,4 +80,4 @@ jobs:
       manifest: pal-tracker/manifest-production.yml
       path: pal-tracker-artifacts/pal-tracker-*.jar
       environment_variables:
-        WELCOME_MESSAGE: "Welcom message from the production environmet"
+        WELCOME_MESSAGE: "Hello from the production environment"
